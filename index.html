@@ -63,7 +63,7 @@ strong,b{font-weight:500}
 .brand{display:flex;align-items:center;text-decoration:none}
 .brand img{height:52px;width:auto;filter:grayscale(1) brightness(.38) contrast(1.1)}
 .navlinks{display:flex;gap:1.6rem;margin-left:1.2rem}
-.navlinks a{font-size:.7rem;letter-spacing:.26em;text-transform:uppercase;text-decoration:none;color:var(--char-soft);position:relative;padding-block:.25rem;font-weight:400}
+.navlinks a{white-space:nowrap;font-size:.7rem;letter-spacing:.26em;text-transform:uppercase;text-decoration:none;color:var(--char-soft);position:relative;padding-block:.25rem;font-weight:400}
 .navlinks a::after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:1px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .35s cubic-bezier(.2,.7,.2,1)}
 .navlinks a:hover,.navlinks a.active{color:var(--char)} .navlinks a:hover::after,.navlinks a.active::after{transform:scaleX(1)}
 .navmeta{margin-left:auto;display:flex;align-items:center;gap:1.1rem}
@@ -84,10 +84,10 @@ strong,b{font-weight:500}
 .navtoggle{display:none;background:none;border:1px solid var(--char);color:var(--char);padding:.45rem .9rem;font-family:var(--sans);font-size:.66rem;letter-spacing:.26em;text-transform:uppercase;cursor:pointer}
 
 /* hero: fotka na celou šíři, text uprostřed, rezervační lišta pod ní */
-.hero{position:relative;isolation:isolate;background:var(--char);color:#fff;overflow:visible}
+.hero{position:relative;isolation:isolate;z-index:5;background:var(--char);color:#fff;overflow:visible}
 .hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 55%;z-index:-2;animation:kb 30s ease-in-out infinite alternate;filter:saturate(.8) contrast(1.02)}
 @keyframes kb{from{transform:scale(1)}to{transform:scale(1.06)}}
-.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(to top,rgba(43,41,38,.62) 0%,rgba(43,41,38,.18) 45%,rgba(43,41,38,.28) 100%)}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(to top,rgba(43,41,38,.66) 0%,rgba(43,41,38,.3) 45%,rgba(43,41,38,.34) 100%)}
 .hero .wrap{min-height:min(88vh,800px);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding-block:clamp(4rem,9vw,7rem) clamp(6rem,10vw,8rem)}
 .masthead{font-size:.68rem;letter-spacing:.42em;text-transform:uppercase;color:var(--gold-soft);display:flex;align-items:center;gap:1.1rem;margin-bottom:1.6rem;font-weight:400}
 .masthead::before,.masthead::after{content:"";width:34px;height:1px;background:var(--gold-soft)}
